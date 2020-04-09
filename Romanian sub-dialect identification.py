@@ -67,6 +67,7 @@ for y in test_labels:
     testing_labels.append(y.split()[1])
 
 test_features = vectorizer.transform(testing_samples)
+prediction = model.predict(test_features)
 
 #Evaluation of accuracy and precision
 f1_score(testing_labels,prediction, average = 'macro')
